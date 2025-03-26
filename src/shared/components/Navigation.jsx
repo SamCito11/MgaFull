@@ -45,15 +45,6 @@ const Navigation = () => {
       icon: <Dashboard />
     },
     {
-      label: 'Configuración',
-      icon: <Settings />,
-      submenu: [
-        { label: 'Roles', path: '/configuracion/roles', icon: <VpnKey /> },
-        { label: 'Usuarios', path: '/configuracion/usuarios', icon: <Person /> },
-        { label: 'Privilegios', path: '/configuracion/privilegios', icon: <Security /> }
-      ]
-    },
-    {
       label: 'Servicios Musicales',
       icon: <MusicNote />,
       submenu: [
@@ -75,6 +66,15 @@ const Navigation = () => {
         { label: 'Pagos', path: '/venta-servicios/pagos', icon: <Payment /> },
         { label: 'Programación de Clases', path: '/venta-servicios/programacion-clases', icon: <Schedule /> },
         { label: 'Asistencia', path: '/venta-servicios/asistencia', icon: <AssignmentTurnedIn /> }
+      ]
+    },
+    {
+      label: 'Configuración',
+      icon: <Settings />,
+      submenu: [
+        { label: 'Roles', path: '/configuracion/roles', icon: <VpnKey /> },
+        { label: 'Usuarios', path: '/configuracion/usuarios', icon: <Person /> },
+        { label: 'Privilegios', path: '/configuracion/privilegios', icon: <Security /> }
       ]
     }
   ];
@@ -125,11 +125,16 @@ const Navigation = () => {
       sx={{
         width: 280,
         flexShrink: 0,
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        height: '100%',
         '& .MuiDrawer-paper': {
           width: 280,
           boxSizing: 'border-box',
           backgroundColor: '#0455a2',
           color: 'white',
+          position: 'static',
           '& .MuiListItemIcon-root': {
             minWidth: '40px',
             color: 'white !important'
@@ -164,22 +169,27 @@ const Navigation = () => {
     >
       <List sx={{ pt: 4, pb: 3 }}>
         <div style={{ 
-          height: '180px',
+          height: '150px',
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center', 
-          marginBottom: '0px',  
-          padding: '20px',
-          marginTop: '10px'
+          padding: '15px',
+          marginTop: '10px',
+          marginBottom: '20px',
+          backgroundColor: 'white',
+          borderRadius: '50%',
+          width: '150px',
+          margin: '0 auto 30px'
         }}>
           <img 
             src={TeAcuerdasLogo} 
             alt="Logo" 
             style={{ 
-              height: '160px',  
-              width: '260px',   
+              height: '120px',  
+              width: '120px',   
               objectFit: 'contain',
-              maxWidth: '100%'
+              maxWidth: '100%',
+              borderRadius: '50%'
             }} 
           />
         </div>
